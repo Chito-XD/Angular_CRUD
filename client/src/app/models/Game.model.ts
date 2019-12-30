@@ -1,7 +1,19 @@
-export interface Game{
-    id?: number,
-    title?: string,
-    description?: string, 
-    image?: string,
-    created_at?: Date
+// export interface Game{
+//     id?: number,
+//     title?: string,
+//     description?: string, 
+//     image?: string,
+//     created_at?: Date
+// }
+
+export class Game{
+    title: string
+    description: string
+    image: string
+
+    constructor(tile: string, description: string, image: string){
+        this.title = tile; 
+        this.description = description; 
+        this.image = image;
+    }
 }

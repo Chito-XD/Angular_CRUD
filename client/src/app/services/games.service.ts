@@ -12,23 +12,23 @@ export class GamesService {
 
   constructor(private http: HttpClient) { }
 
-  getGames(){
+  getGames() {
     return this.http.get(`${this.API_URI}/games`);
   }
 
-  getGame(id: string){
+  getGame(id: string) {
     return this.http.get(`${this.API_URI}/games/${id}`);
   }
 
-  saveGame(game: Game){
+  saveGame(game: Game) {
     return this.http.post(`${this.API_URI}/games`, game);
   }
 
-  deleteGame(id: string){
+  deleteGame(id: string) {
     return this.http.delete(`${this.API_URI}/games/${id}`);
   }
 
-  updateGame(id: string, updateGame: Game){
+  updateGame(id: string, updateGame: Game) {
     return this.http.put(`${this.API_URI}/games/${id}`, updateGame);
   }
 }
