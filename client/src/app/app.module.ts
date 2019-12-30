@@ -7,6 +7,8 @@ import { NavigationComponent } from './comonents/navigation/navigation.component
 import { GameFormComponent } from './comonents/game-form/game-form.component';
 import { GameListComponent } from './comonents/game-list/game-list.component';
 
+import { GamesService } from './services/games.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { GameListComponent } from './comonents/game-list/game-list.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    GamesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
